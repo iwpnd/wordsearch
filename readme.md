@@ -2,6 +2,14 @@
 
 I wanted to see if I can write a small search algorithm without any external libraries to search for given search terms in an input text.
 
+## installation
+
+```
+git clone https://github.com/iwpnd/wordsearch.git
+cd wordsearch
+pip install -e .
+```
+
 ## Usage
 
 ```python
