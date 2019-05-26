@@ -1,0 +1,1 @@
+from .WordSearch import Search, NotFoundError

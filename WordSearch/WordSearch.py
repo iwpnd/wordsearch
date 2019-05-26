@@ -2,7 +2,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 
-class WordSearch:
+class Search:
 
     """given a text and a word, lookup the occurance of the word with start/end index
     
@@ -30,7 +30,7 @@ class WordSearch:
 
     sindex = 0  # cursor moving along string index
     oindex = 0  # start index of first occurance
-    tindex = 0  # cursor if exact_match == False to traverse word until boundary
+    
 
     def __init__(self, search_term, input_text, url=False, exact_match=True, case_sensitive=True, logger=None):
 
@@ -124,7 +124,8 @@ class WordSearch:
         """traverse input_text string and append terms matches to occurances
         that start with search_term but do not yet reach word boundary
         """
-
+        
+        self.tindex = 0  # cursor if exact_match == False to traverse word until boundary
         while (
             self.input_text[
                 self.oindex +
@@ -192,7 +193,7 @@ class WordSearch:
             raise ValueError('Provide a search term and input text as string')
 
 
-class NotFound(Exception):
+class NotFoundError(Exception):
     """Custom exception to be raised if search_term is not in input_text
     """
     pass

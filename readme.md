@@ -14,27 +14,23 @@ pip install -e .
 
 ```python
 
-from WordSearch import WordSearch
+from WordSearch import Search
 
 input_text = 'Haters gonna hate'
 search_term = 'Hate'
 
-result = WordSearch(search_term=search_term, input_text=input_text, exact_match=True, case_sensitive=True)
+result = Search(search_term=search_term, input_text=input_text, exact_match=True, case_sensitive=True)
 result.run()
 
 >> []
 
-result = WordSearch(search_term=search_term, input_text=input_text, exact_match=False, case_sensitive=True)
+result = Search(search_term=search_term, input_text=input_text, exact_match=False, case_sensitive=True)
 result.run()
 
 >> [('Haters', 0, 5)]
 
-result = WordSearch(search_term=search_term, input_text=input_text, exact_match=False, case_sensitive=False)
+result = Search(search_term=search_term, input_text=input_text, exact_match=False, case_sensitive=False)
 result.run()
 
 >> [('haters', 0, 5), ('hate', 13, 16)]
 ```
-
-TO-DO: 
-- tests
-- exact_match=False, case_sensitive=False IndexError
