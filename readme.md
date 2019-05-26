@@ -8,6 +8,8 @@ I wanted to see if I can write a small search algorithm without any external lib
 git clone https://github.com/iwpnd/wordsearch.git
 cd wordsearch
 pip install -e .
+pytest tests/unit
+
 ```
 
 ## Usage
