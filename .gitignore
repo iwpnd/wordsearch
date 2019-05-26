@@ -1,4 +1,9 @@
 /env/
 *.ipynb
 /.ipynb_checkpoints
+/WordSearch/.ipynb_checkpoints/
 /WordSearch.egg-info/
+/WordSearch/.cache/
+/WordSearch/__pycache__/*
+/.cache/
+*.pyc
